@@ -61,8 +61,8 @@ void draw() {
     //the hit detection for the rectangles
     if (mouseX>(pos[i].x)&&mouseX<(pos[i].x)+boxWidth&&mouseY>pos[i].y-(boxLength/2)&&mouseY<pos[i].y+(boxLength/2) &&mousePressed) {
       if (numbers[i] == answer) {
-          text("CORRECT ANSWER", 200, 400);
-        
+        text("CORRECT ANSWER", 200, 400);
+
         //testing for the question number
         number1 = number1+(int) random(0, 6);//replacing the values of index 0 with another number
         number2 = number2+ (int) random(0, 6);//replacing the values of index 1 with another number
@@ -79,9 +79,8 @@ void draw() {
       }//end for the correct statement
 
       else if (numbers[i] != answer) {
-             
+
         text("WRONG ANSWER", 200, 400);
-      
       }
       fill(0, 255, 50);
       //text(answers[i]+" + "+answers[i]+"  =  ?", 200, 200);
@@ -101,6 +100,56 @@ void draw() {
   if (millis() > 11000) {
     last = millis();
     //put whichever function u wnat to put in it
-    println("hello world");
   }
-}                                                                                                                                                 
+}
+
+//for the peasy cam
+////put these above the setup
+//importing the peasy cam
+//import peasy.*;
+//declaring the peasy cam
+//PeasyCam cam;
+/**************************************************////put this in the setup
+//cam = new PeasyCam(this, midPoint.x, midPoint.y, 0, 800);  
+// cam.rotateX(0.0);
+// cam.rotateY(0.0);
+// cam.rotateZ(0.0);
+
+
+//for the music 
+//minim
+//Minim minim;
+//AudioPlayer backgroundMusic;
+//void SoundSetup() {
+//  minim = new Minim(this);
+//  backgroundMusic = minim.loadFile("abc.mp3");//same as above//the background music
+//}
+
+//void music() {
+//  //sound for the background music
+//  backgroundMusic.play();
+//  //compulsary if statement 
+//  if (backgroundMusic.position() == backgroundMusic.length()) {
+//    backgroundMusic.rewind();
+//  }
+////telling thet if the state == 1 the u can pause or play the music
+//  if (state == 1) {
+//    if (key == '9') {
+//      backgroundMusic.pause();
+//    } else if (key == '0') {
+//      backgroundMusic.play();
+//    }
+//  }
+//}
+
+/****************************************************************************************/
+//for loading an image
+//int numberOfObjects = 25;
+
+//PImage[] myImageArray = new PImage[numberOfObjects];
+//myFloatArray[] = new float[numberOfObjects];
+
+//for (int i=0; i<numberOfObjects; i++){
+//  myImageArray[i] = loadImage( "fileName" + i + ".png");
+//  myFloatArray[i] = random(0, 1234);
+//}
